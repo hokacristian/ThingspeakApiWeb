@@ -3,13 +3,110 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="script.js"></script>
-    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <title>GREEN HOUSE MONITORING</title>
+    <link rel="icon" type="image/png" sizes="16*16" href="img/aa.png"> 
   </head>
   <body>
-    <h1>Temperature</h1>
-    <h2 id="field-1">--</h2>
-    <h2 id="field-2">--</h2>
-  </body>
+    <header class="header">  /* ini untuk header */
+      <nav>
+        <div class="running-text"><h1><span class="auto-input"></span></h1></div>
+      </nav>
+    </header>
+    <section class="cards">
+      <article class="card">
+        <div clas="card-img"></div>
+        <a href="https://thingspeak.com/channels/2057016">
+          <div class="card-img-hover"
+          style="background-image: url(img/c2.jpg);"></div>
+          </div>
+        </a>
+
+        <div class="card-info">
+          <span class="card-category"> SUHU CELCIUS</span>
+          <h3 id="C">--</h3>
+          <span class="card-by">
+            Cek Disini : 
+            <a href="https://thingspeak.com/channels/2057016/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15" class="card-admin">ThingSpeak : SUHU</a>
+        </span>
+        </div>
+      </article>
+      <article class="card">
+        <div clas="card-img"></div>
+        <a href="https://thingspeak.com/channels/2057016">
+          <div class="card-img-hover"
+          style="background-image: url(img/k1.jpg);"></div>
+        </div>
+        </a>
+
+        <div class="card-info">
+          <span class="card-category"> SUHU KELVIN</span>
+          <h3 id="K">--</h3>
+          <span class="card-by">
+            Cek Disini : 
+            <a href="https://thingspeak.com/channels/2057016/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15" class="card-admin">ThingSpeak : KELVIN</a>
+        </span>
+        </div>
+      </article>
+      <article class="card">
+        <div clas="card-img"></div>
+        <a href="https://thingspeak.com/channels/2057016">
+          <div class="card-img-hover"
+          style="background-image: url(img/a1.webp);"></div>
+        </div>
+        </a>
+
+        <div class="card-info">
+          <span class="card-category"> ANALOG </span>
+          <h3 id="A">--</h3>
+          <span class="card-by">
+            Cek Disini : 
+            <a href="https://thingspeak.com/channels/2057016/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15" class="card-admin">ThingSpeak : ANALOG</a>
+        </span>
+        </div>
+      </article>
+      <article class="card">
+        <div clas="card-img"></div>
+        <a href="https://thingspeak.com/channels/2057016">
+          <div class="card-img-hover"
+          style="background-image: url(img/l1.jpg);"></div>
+        </div>
+        </a>
+
+        <div class="card-info">
+          <span class="card-category"> LUX </span>
+          <h3 id="L">--</h3>
+          <span class="card-by">
+            Cek Disini : 
+            <a href="https://thingspeak.com/channels/2057016/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15" class="card-admin">ThingSpeak : LUX</a>
+        </span>
+        </div>
+      </article>
+    </section>
+    <footer class="footer">
+      <div class="footer-center">
+        <div>
+          <p class="footer-about">
+            <span>About Green House Monitoring </span>
+            Alat ini berguna untuk memantau Green House dari jarak jauh, dengan menampilkan index Suhu Celcius, Kelvin dan Cahaya di dalam Green House 
+        </p>
+        <div class="footer-media">
+          <a href="https://www.instagram.com/hoka.csa/"><i class="fa fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/hoka-cristian-7620851b0/"><i class="fa fa-linkedin"></i></a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      let typed = new Typed(".auto-input",{
+      strings: ["Green House Monitoring", "Create by : Hoka Cristian Son"],
+      typeSpeed: 150,
+      backSpeed: 50,
+      loop: true
+  })
+  </script>
+</body>
 </html>

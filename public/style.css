@@ -1,0 +1,220 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: "Roboto Slab", sans-serif;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+body {
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    position: absolute;
+    background-color: #040a18;
+    top: 0;
+    left: 0;
+    padding: 0 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.running-text{
+    color: #ffffff;
+    padding: 10px 10px 10px 10px;
+    font: bold 16px sans-serif;
+}
+.cards {
+    width: 100%;
+    max-width: 2000px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1em;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.card {
+    margin-right: 50px;
+    margin-bottom: 50px;
+    background-color: #fff;
+    width: 33.3%;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+    transition: cubic-bezier(0.175, 0.885, 0, 1);
+}
+
+.card-img {
+    width: 100%;
+    height: 100px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    visibility: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card-img-hover {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: absolute;
+    height: 0px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    top: 0;
+    transition: 0.2s all ease-out;
+}
+.card:hover .card-img-hover {
+    height: 100%;
+    opacity: 0.3;
+}
+
+.card:hover {
+    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.1, 1.1);
+}
+
+.card-info {
+    z-index: 2;
+    background-color: #fff;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    padding: 16px 24px 24px 24px;
+}
+
+.card-category {
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-style: 500;
+    color: #868686;
+}
+
+.card-title {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.card-by {
+    font-size: 12px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+}
+
+.card-admin {
+    font-weight: 600;
+    text-decoration: none;
+    color: #ad7d52;
+}
+
+.card:hover .card-info {
+    background-color: transparent;
+    position: relative;
+}
+
+.card-info-hover {
+    position: absolute;
+    padding: 50px;
+    width: 100%;
+    opacity: 0;
+    top: 0;
+}
+
+.card:hover .card-info-hover {
+    opacity: 1;
+}
+
+@media screen and (max-width: 1000px) {
+    .card {
+        width: 20em;
+        display: block;
+        margin: 1em;
+    }
+
+    body {
+        display: flex;
+        align-items: flex-start;
+    }
+}
+footer {
+    position: fixed;
+    bottom: 0;
+}
+
+.footer {
+    color: #fff;
+    background-color: #040a18;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 30px 10px 10px 50px;
+    margin-top: 50px;
+}
+.footer .footer-about {
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0px;
+}
+
+.footer .footer-about span {
+    display: block;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer .footer-media {
+    margin-top: 25px;
+}
+
+.footer .footer-media a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background-color: #33383b;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 50px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+.footer .footer-media a:hover {
+    background-color: rgb(0, 122, 82);
+}
+
+@media (max-width: 880px) {
+    .footer .footer-center {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: left;
+    }
+
+    .footer .footer-center i {
+        margin-left: 0px;
+    }
+
+}
